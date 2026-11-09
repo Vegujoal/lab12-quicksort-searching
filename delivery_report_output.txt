@@ -1,39 +1,39 @@
 =================================================
- E4: Estado de 'orders' ANTES de la vista y reporte
+ E4: Order status BEFORE of view and report
 =================================================
 Original collection:
-  - ID: 420 | Tipo: DELIVERY | Estado: PENDING | Edificio: Biblioteca | Prioridad: 1
-  - ID: 180 | Tipo: DELIVERY | Estado: IN_PROGRESS | Edificio: Ingenieria | Prioridad: 3
-  - ID: 650 | Tipo: DINE_IN | Estado: PENDING | Edificio: Cafeteria-Lunch | Prioridad: 1
-  - ID: 310 | Tipo: DELIVERY | Estado: PENDING | Edificio: Biblioteca | Prioridad: 3
-  - ID: 205 | Tipo: DELIVERY | Estado: PENDING | Edificio: Biblioteca | Prioridad: 3
-  - ID: 900 | Tipo: DELIVERY | Estado: COMPLETED | Edificio: Ingenieria | Prioridad: 2
+  - ID: 420 | Type: DELIVERY | Status: PENDING | Building: Biblioteca | Priority: 1
+  - ID: 180 | Type: DELIVERY | Status: IN_PROGRESS | Building: Ingenieria | Priority: 3
+  - ID: 650 | Type: DINE_IN | Status: PENDING | Building: Cafeteria-Lunch | Priority: 1
+  - ID: 310 | Type: DELIVERY | Status: PENDING | Building: Biblioteca | Priority: 3
+  - ID: 205 | Type: DELIVERY | Status: PENDING | Building: Biblioteca | Priority: 3
+  - ID: 900 | Type: DELIVERY | Status: COMPLETED | Building: Ingenieria | Priority: 2
 
 =================================================
- E2: Vista filtrada y ordenada (Reporte)
+ E2: View filtred and sorted (Reporting)
 =================================================
-Vista ordenada:
-  - ID en Vista: 205 | Tipo: DELIVERY | Estado: PENDING | Edificio: Biblioteca | Prioridad: 3
-  - ID en Vista: 310 | Tipo: DELIVERY | Estado: PENDING | Edificio: Biblioteca | Prioridad: 3
-  - ID en Vista: 420 | Tipo: DELIVERY | Estado: PENDING | Edificio: Biblioteca | Prioridad: 1
-  - ID en Vista: 180 | Tipo: DELIVERY | Estado: IN_PROGRESS | Edificio: Ingenieria | Prioridad: 3
+View sorted:
+  - ID en Vista: 205 | Type: DELIVERY | Status: PENDING | Building: Biblioteca | Priority: 3
+  - ID en Vista: 310 | Type: DELIVERY | Status: PENDING | Building: Biblioteca | Priority: 3
+  - ID en Vista: 420 | Type: DELIVERY | Status: PENDING | Building: Biblioteca | Priority: 1
+  - ID en Vista: 180 | Type: DELIVERY | Status: IN_PROGRESS | Building: Ingenieria | Priority: 3
 
 =================================================
- E3: Busqueda de orden en la vista
+ E3: Searching for the order in the view
 =================================================
-Ingrese el ID de la orden a buscar: 180
-Orden encontrada en la posicion 3 de la vista
-  - Edificio: Ingenieria
-  - Estado: IN_PROGRESS
-  - Prioridad: 3
+Insert order ID: 310
+Order found in position 1 of view
+  - Building: Biblioteca
+  - Status: PENDING
+  - Priority: 3
 
 =================================================
- E4: Estado de 'orders' DESPUES de la ejecucion
+ E4: Order status After execution
 =================================================
-Original collection (intacta y sin alteraciones):
-  - ID: 420 | Tipo: DELIVERY | Estado: PENDING | Edificio: Biblioteca | Prioridad: 1
-  - ID: 180 | Tipo: DELIVERY | Estado: IN_PROGRESS | Edificio: Ingenieria | Prioridad: 3
-  - ID: 650 | Tipo: DINE_IN | Estado: PENDING | Edificio: Cafeteria-Lunch | Prioridad: 1
-  - ID: 310 | Tipo: DELIVERY | Estado: PENDING | Edificio: Biblioteca | Prioridad: 3
-  - ID: 205 | Tipo: DELIVERY | Estado: PENDING | Edificio: Biblioteca | Prioridad: 3
-  - ID: 900 | Tipo: DELIVERY | Estado: COMPLETED | Edificio: Ingenieria | Prioridad: 2
+Original collection (Intact):
+  - ID: 420 | Type: DELIVERY | Status: PENDING | Building: Biblioteca | Priority: 1
+  - ID: 180 | Type: DELIVERY | Status: IN_PROGRESS | Building: Ingenieria | Priority: 3
+  - ID: 650 | Type: DINE_IN | Status: PENDING | Building: Cafeteria-Lunch | Priority: 1
+  - ID: 310 | Type: DELIVERY | Status: PENDING | Building: Biblioteca | Priority: 3
+  - ID: 205 | Type: DELIVERY | Status: PENDING | Building: Biblioteca | Priority: 3
+  - ID: 900 | Type: DELIVERY | Status: COMPLETED | Building: Ingenieria | Priority: 2

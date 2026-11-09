@@ -48,7 +48,7 @@ int main()
     
     // E4: Muestra los estados de 'orders' ANTES de la vista y reporte
     cout << "=================================================" << endl;
-    cout << " E4: Estado de 'orders' ANTES de la vista y reporte" << endl;
+    cout << " E4: Order status BEFORE of view and report" << endl;
     cout << "=================================================" << endl;
     displayOrders(orders, CAPACITY, "Original collection:");
 
@@ -70,33 +70,33 @@ int main()
     }
 
     cout << "\n=================================================" << endl;
-    cout << " E2: Vista filtrada y ordenada (Reporte)" << endl;
+    cout << " E2: View filtred and sorted (Reporting)" << endl;
     cout << "=================================================" << endl;
-    displayView(view, viewCount, "Vista ordenada:");
+    displayView(view, viewCount, "View sorted:");
 
     // =========================================================
     // E3: Solicita por consola un ID y busca linealmente en la vista
     // =========================================================
     cout << "\n=================================================" << endl;
-    cout << " E3: Busqueda de orden en la vista" << endl;
+    cout << " E3: Searching for the order in the view" << endl;
     cout << "=================================================" << endl;
     
     int searchId;
-    cout << "Ingrese el ID de la orden a buscar: ";
+    cout << "Insert order ID: ";
     cin >> searchId;
 
     int foundIndex = findOrderInView(view, viewCount, searchId);
 
     if (foundIndex != -1)
     {
-        cout << "Orden encontrada en la posicion " << foundIndex << " de la vista" << endl;
-        cout << "  - Edificio: " << view[foundIndex]->building << endl;
-        cout << "  - Estado: " << view[foundIndex]->status << endl;
-        cout << "  - Prioridad: " << view[foundIndex]->priority << endl;
+        cout << "Order found in position " << foundIndex << " of view" << endl;
+        cout << "  - Building: " << view[foundIndex]->building << endl;
+        cout << "  - Status: " << view[foundIndex]->status << endl;
+        cout << "  - Priority: " << view[foundIndex]->priority << endl;
     }
     else
     {
-        cout << "La orden con ID " << searchId << " no se encuentra en la vista activa de DELIVERY." << endl;
+        cout << "Order with ID " << searchId << "is not in the active list of Orders." << endl;
     }
 
     // =========================================================
@@ -104,9 +104,9 @@ int main()
     // Comprobando que ningún campo ni posición original cambió.
     // =========================================================
     cout << "\n=================================================" << endl;
-    cout << " E4: Estado de 'orders' DESPUES de la ejecucion" << endl;
+    cout << " E4: Order status After execution" << endl;
     cout << "=================================================" << endl;
-    displayOrders(orders, CAPACITY, "Original collection (intacta y sin alteraciones):");
+    displayOrders(orders, CAPACITY, "Original collection (Intact):");
 
     // Nota: No se ejecuta delete sobre los punteros de 'view' porque apuntan 
     // a elementos en la pila (stack) pertenecientes al arreglo estático 'orders'.
@@ -121,10 +121,10 @@ void displayOrders(const OrderPreview orders[], int count, const string& title)
     for (int index = 0; index < count; index++)
     {
         cout << "  - ID: " << orders[index].orderId
-             << " | Tipo: " << orders[index].orderType
-             << " | Estado: " << orders[index].status
-             << " | Edificio: " << orders[index].building
-             << " | Prioridad: " << orders[index].priority << endl;
+             << " | Type: " << orders[index].orderType
+             << " | Status: " << orders[index].status
+             << " | Building: " << orders[index].building
+             << " | Priority: " << orders[index].priority << endl;
     }
 }
 
@@ -135,26 +135,26 @@ void displayView(OrderPreview *view[], int count, const string& title)
     for (int index = 0; index < count; index++)
     {
         cout << "  - ID en Vista: " << view[index]->orderId
-             << " | Tipo: " << view[index]->orderType
-             << " | Estado: " << view[index]->status 
-             << " | Edificio: " << view[index]->building
-             << " | Prioridad: " << view[index]->priority << endl;
+             << " | Type: " << view[index]->orderType
+             << " | Status: " << view[index]->status 
+             << " | Building: " << view[index]->building
+             << " | Priority: " << view[index]->priority << endl;
     }
 }
 
 // Comparador personalizado según el criterio E2:
-// 1. Edificio ascendente
-// 2. Prioridad descendente (mayor valor primero)
+// 1. Building ascendente
+// 2. Priority descendente (mayor valor primero)
 // 3. ID ascendente
 bool compareOrders(const OrderPreview* a, const OrderPreview* b)
 {
     if (a->building != b->building)
     {
-        return a->building < b->building; // Ascendente por edificio
+        return a->building < b->building; // Ascendente por Building
     }
     if (a->priority != b->priority)
     {
-        return a->priority > b->priority; // Descendente por prioridad
+        return a->priority > b->priority; // Descendente por Priority
     }
     return a->orderId < b->orderId;       // Ascendente por ID si todo lo demás coincide
 }
